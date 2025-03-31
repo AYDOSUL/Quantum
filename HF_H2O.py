@@ -10,7 +10,7 @@ molecule = qchem.Molecule(symbols, coordinates)
 H, qubits = qchem.molecular_hamiltonian(molecule)
 
 # Create quantum device
-dev = qml.device("default.qubit", wires=qubits)
+dev = qml.device("lightning.qubit", wires=qubits)
 
 # Define QNode to compute energy
 @qml.qnode(dev)

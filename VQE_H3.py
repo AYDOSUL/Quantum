@@ -10,7 +10,7 @@ hamiltonian, qubits = qchem.molecular_hamiltonian(symbols, coordinates, charge=1
 hf = qchem.hf_state(electrons=2, orbitals = 6)
 
 num_wires = qubits
-dev = qml.device("default.qubit", wires=num_wires)
+dev = qml.device("lightning.qubit", wires=num_wires)
 
 @qml.qnode(dev)
 #Calculates Energy

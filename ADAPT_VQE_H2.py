@@ -16,7 +16,7 @@ operator_pool = doubles_excitations + singles_excitations
 
 #Generating the Hartree-Fock state for optimization
 hf_state = qml.qchem.hf_state(n_electrons, qubits)
-dev = qml.device("default.qubit", wires=qubits)
+dev = qml.device("lightning.qubit", wires=qubits)
 
 #Creating the base circuit
 @qml.qnode(dev)

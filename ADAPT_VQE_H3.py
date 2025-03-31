@@ -14,7 +14,7 @@ doubles_excitations = [qml.DoubleExcitation(0.0, x) for x in doubles]
 operator_pool = doubles_excitations + singles_excitations
 
 hf_state = qml.qchem.hf_state(n_electrons, qubits)
-dev = qml.device("default.qubit", wires=qubits)
+dev = qml.device("lightning.qubit", wires=qubits)
 @qml.qnode(dev)
 def circuit():
     qml.BasisState(hf_state, wires=range(qubits))
