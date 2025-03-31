@@ -25,7 +25,7 @@ def circuit():
     return qml.expval(H)
 
 #Creating the optimization loop
-opt = qml.AdaptiveOptimizer(0, 0.01)
+opt = qml.AdaptiveOptimizer()
 for i in range(len(operator_pool)):
     circuit, energy, gradient = opt.step_and_cost(circuit, operator_pool, drain_pool=True)
     print('Energy:', energy)
