@@ -34,7 +34,7 @@ theta = np.array([0.0,0.0], requires_grad = True)
 
 energy = [cost_function(theta)]
 angle = [theta]
-max_iterations = 50
+max_iterations = 100
 
 for n in range(max_iterations + 1):
   theta, prev_energy = opt.step_and_cost(cost_function, theta)
