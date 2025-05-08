@@ -24,8 +24,9 @@ def circuit():
 gradient = 1
 prev_gradient = 1
 opt = qml.AdaptiveOptimizer(1, 0.1)
-
+run = 0
 for i in range(len(operator_pool)):
+    run = run + 1
     prev_gradient = gradient
     circuit, energy, gradient = opt.step_and_cost(circuit, operator_pool, drain_pool=True)
     derivative_gradient = gradient/prev_gradient
@@ -33,6 +34,7 @@ for i in range(len(operator_pool)):
     print(qml.draw(circuit, show_matrices=False))
     print("Largest Gradient", gradient)
     print("Gradient Prime", derivative_gradient)
+    print(f"Iteration number: {run}")
     print()
     if 1e-7 > gradient:
         break
