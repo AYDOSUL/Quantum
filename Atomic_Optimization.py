@@ -49,7 +49,7 @@ def find_lowest_energy_bond_length(symbols, initial_bond_length, num_steps=100, 
     return lowest_energy_bond_length
 
 if __name__ == "__main__":
-    symbols = ["C", "C"]
+    symbols = ["O", "O"]
     initial_bond_length = 1.3459  # Initial guess for H2 bond length in Bohr
     lowest_energy_bond_length = find_lowest_energy_bond_length(symbols, initial_bond_length)
     print(f"Estimated lowest energy bond length for H2: {lowest_energy_bond_length:.4f} Bohr")
