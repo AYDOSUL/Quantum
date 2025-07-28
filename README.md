@@ -1,1 +1,1 @@
-Using Quantum Chemistry algorithms to simulate interactions between molecules
+Using Quantum Chemistry to calculate the ground state energies of molecules
